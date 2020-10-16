@@ -1,49 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { ProductListingComponent } from './product-listing/product-listing.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
+import { CartComponent } from './components/header/cart/cart.component';
+import { CartItemsComponent } from './components/header/cart/cart-items/cart-items.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ShoppingComponent } from './components/shopping/shopping.component';
+import { ProductsComponent } from './components/shopping/products/products.component';
+import { ProductItemsComponent } from './components/shopping/products/product-items/product-items.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ProductDetailsComponent } from './components/shopping/products/product-details/product-details.component';
+import { ViewCartComponent } from './components/shopping/view-cart/view-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    CartComponent,
+    CartItemsComponent,
     FooterComponent,
-    ProductListingComponent,
+    ShoppingComponent,
+    ProductsComponent,
+    ProductItemsComponent,
+    BreadcrumbComponent,
+    SpinnerComponent,
     ProductDetailsComponent,
-    HomeComponent,
-    NotFoundComponent
+    ViewCartComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'products',
-        component: ProductListingComponent
-      },
-      {
-        path: 'products/:id',
-        component: ProductDetailsComponent
-      },
-      {
-        path: '**',
-        component: NotFoundComponent
-      }
-    ])
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

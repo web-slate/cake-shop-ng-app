@@ -12,14 +12,19 @@ import { IProduct } from '../../services/product.model'
 export class ProductDetailsComponent implements OnInit {
   id: number;
   productDetails: IProduct;
+  loading:boolean;
   constructor(private route: ActivatedRoute, private _product: ProductService) { }
 
   ngOnInit(): void {
+    this.loading = true;
     this.route.paramMap
       .subscribe(params => {
         this.id = +params.get('id')
         this._product.getProductDetails(this.id)
-          .subscribe(data => this.productDetails = data)
+          .subscribe(data => {
+            this.productDetails = data;
+            this.loading = false;
+          })
       });
   }
 

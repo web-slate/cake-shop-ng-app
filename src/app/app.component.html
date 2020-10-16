@@ -1,3 +1,21 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="container">
+  <app-header></app-header>
+  <div class="row">
+    <div class="col">
+      <app-breadcrumb></app-breadcrumb>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<footer class="footer fixed-bottom">
+    <div class="container">
+      <span class="text-muted">
+      <app-footer></app-footer>
+    </span>
+    </div>
+  </footer>
+
