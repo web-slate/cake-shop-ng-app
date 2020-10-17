@@ -14,7 +14,7 @@
                 <td>{{items.title}}</td>
                 <td>{{items.quantity}}</td>
                 <td>{{items.price | currency:'INR'}} x {{items.quantity}}</td>
-                <td>{{items.price * items.quantity | currency:'INR' }}</td>
+                <td>{{items.price * items.quantity | currency:appCurrency }}</td>
             </tr>
         </tbody>
     </table>

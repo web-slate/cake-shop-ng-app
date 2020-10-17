@@ -15,6 +15,8 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { ProductDetailsComponent } from './components/shopping/products/product-details/product-details.component';
 import { ViewCartComponent } from './components/shopping/view-cart/view-cart.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ViewCartComponent } from './components/shopping/view-cart/view-cart.com
     BreadcrumbComponent,
     SpinnerComponent,
     ProductDetailsComponent,
-    ViewCartComponent
+    ViewCartComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

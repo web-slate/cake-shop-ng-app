@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductDetailsComponent } from './components/shopping/products/product-details/product-details.component'
 import { ProductsComponent } from './components/shopping/products/products.component';
 import { ViewCartComponent } from './components/shopping/view-cart/view-cart.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductsComponent
+    component: HomeComponent
   },
   {
     path: 'product/:id',
@@ -20,6 +22,10 @@ const routes: Routes = [
   {
     path: 'cart',
     component:ViewCartComponent
+  },
+  {
+    path: '**',
+    component:NotFoundComponent
   }
 ];
 
