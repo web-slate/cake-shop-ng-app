@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { appCurrency } from 'src/app/config'
+import { appCurrency } from 'src/app/config';
 
 @Component({
   selector: 'app-cart-items',
@@ -9,12 +9,10 @@ import { appCurrency } from 'src/app/config'
 export class CartItemsComponent implements OnInit {
   @Input() cartCount;
   @Input() cartTotal;
-  appCurrency
+  appCurrency;
   constructor() {
-    this.appCurrency = appCurrency
+    this.appCurrency = appCurrency;
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
