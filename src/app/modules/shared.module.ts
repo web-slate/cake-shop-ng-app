@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { HomeComponent } from '../components/common/home/home.component';
 import { HeaderComponent } from '../components/common/header/header.component';
@@ -16,7 +17,13 @@ import { NotFoundComponent } from '../components/common/not-found/not-found.comp
     FooterComponent,
     NotFoundComponent
   ],
-  imports: [CommonModule, MatGridListModule, MatToolbarModule, MatIconModule],
+  imports: [
+    CommonModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatBadgeModule
+  ],
   exports: [
     HomeComponent,
     HeaderComponent,
@@ -24,7 +31,8 @@ import { NotFoundComponent } from '../components/common/not-found/not-found.comp
     NotFoundComponent,
     MatGridListModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatBadgeModule
   ]
 })
 export class SharedModule {}
